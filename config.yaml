@@ -5,4 +5,4 @@ db:
   password: postgres
   database: mydb
   max-connections: 10
-  max-idle-time: 10
+  max-idle-time: 5m
