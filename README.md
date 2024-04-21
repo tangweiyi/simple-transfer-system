@@ -9,6 +9,53 @@ go run ./cmd
 
 Make sure `docker compose up` brings up a fresh postgresql container for migration scripts to take effect
 
+## Endpoints
+* `POST` `localhost:8080/accounts`
+    * Request Body:
+    ```
+    {
+        "account_id":210,
+        "initial_balance":1000
+    }
+    ```
+    * Response:
+    ```
+    {
+        "code": 0,
+        "data": null,
+        "message": "success"
+    }
+    ```
+* `GET` `localhost:8080/accounts/:account_id`
+    * Response:
+    ```
+    {
+        "code": 0,
+        "data": {
+            "account_id": 210,
+            "balance": "1000.00000"
+        },
+        "message": "success"
+    }
+    ```
+* `POST` `localhost:8080/transactions`
+    * Request Body:
+    ```
+    {
+        "source_account_id":123,
+        "destination_account_id":456,
+        "amount":"111.3333"
+    }
+    ```
+    * Response:
+    ```
+    {
+        "code": 0,
+        "data": null,
+        "message": "success"
+    }
+    ```
+
 ## Assumptions made:
 * Account balance can only be positive
 * Transaction amount must be positive and `source` account 'transfers' to `destination` account
