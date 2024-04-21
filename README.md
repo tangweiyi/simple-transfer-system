@@ -17,3 +17,8 @@ Make sure `docker compose up` brings up a fresh postgresql container for migrati
 * Since this service is intended for internal use, error is not masked before sending out in response
 * Account balance is limited to 131067 (131072-5) digits before decimal point, and 5 digits after decimal point
 * `initial_balance` and `amount` accepts both string and number
+
+## Improvement opportunities
+* Use interface for dependency injection to allow mock and unit testing
+* Use mocksql to mock database behavior
+* Use `wire` code-gen for dependency injection
