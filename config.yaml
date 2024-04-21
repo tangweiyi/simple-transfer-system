@@ -1,0 +1,8 @@
+db:
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+  database: mydb
+  max-connections: 10
+  max-idle-time: 10
