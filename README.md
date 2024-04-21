@@ -56,6 +56,8 @@ Make sure `docker compose up` brings up a fresh postgresql container for migrati
     }
     ```
 
+* Unsuccessful requests' response code will not be 0
+
 ## Assumptions made:
 * Account balance can only be positive
 * Transaction amount must be positive and `source` account 'transfers' to `destination` account
