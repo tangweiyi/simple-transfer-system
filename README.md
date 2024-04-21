@@ -19,6 +19,6 @@ Make sure `docker compose up` brings up a fresh postgresql container for migrati
 * `initial_balance` and `amount` accepts both string and number
 
 ## Improvement opportunities
-* Use interface for dependency injection to allow mock and unit testing
+* Use interface for constructors to allow mock and unit testing
 * Use mocksql to mock database behavior
 * Use `wire` code-gen for dependency injection
